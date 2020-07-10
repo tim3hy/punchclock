@@ -11,6 +11,8 @@
     </head>
     <body>
 
+        <h2>Punchclock</h2>
+
         <form id="createEntryForm">
             <label for="checkIn">Check in</label>
             <input type="date" name="checkInDate" id="checkIn" required>
@@ -20,6 +22,7 @@
             <input type="time" name="checkOutTime" required>
             <input type="submit" value="Save"/>
         </form>
+
         <table>
             <thead>
                 <tr>
@@ -35,5 +38,14 @@
                 </tr>
             </tbody>
         </table>
+        <h2>Essensvorschlag für cafeteria</h2>
+
+        <form id="createVorschlagForm">
+            <label for="vorschlag">Vorschlag: </label>
+            <input type="string" name="vorschlag" id="vorschlag" required>
+            <label for="date">Date</label>
+            <input type="date" name="date" id="date" required>
+            <input type="submit" value="Save"/>
+        </form>
     </body>
 </html>
