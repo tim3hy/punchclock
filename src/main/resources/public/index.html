@@ -38,13 +38,15 @@
                 </tr>
             </tbody>
         </table>
-        <h2>Essensvorschlag für cafeteria</h2>
+        <h2>Abwesenheit/Krankheit</h2>
 
-        <form id="createVorschlagForm">
-            <label for="vorschlag">Vorschlag: </label>
-            <input type="string" name="vorschlag" id="vorschlag" required>
-            <label for="date">Date</label>
-            <input type="date" name="date" id="date" required>
+        <form id="createAbwesenheitForm">
+            <label for="startDate">Start Datum</label>
+            <input type="date" name="startDate" id="startDate" required>
+            <label for="endDate">End Datum</label>
+            <input type="date" name="endDate" id="endDate" required>
+            <label for="beschreibung">Beschreibung</label>
+            <input type="string" name="beschreibung" id="beschreibung" required>
             <input type="submit" value="Save"/>
         </form>
 
@@ -52,8 +54,9 @@
             <thead>
             <tr>
                 <th>ID</th>
-                <th>Vorschlag</th>
-                <th>Datum</th>
+                <th>Start Datum</th>
+                <th>End Datum</th>
+                <th>Beschreibung</th>
             </tr>
             </thead>
             <tbody id="vorschlagDisplay">

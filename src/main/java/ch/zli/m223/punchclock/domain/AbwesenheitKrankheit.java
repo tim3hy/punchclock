@@ -13,6 +13,8 @@ import java.util.Date;
 
 @Entity
 public class AbwesenheitKrankheit {
+
+    //Attribute definieren
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -27,14 +29,17 @@ public class AbwesenheitKrankheit {
 
     private String beschreibung;
 
+    //Id holen
     public Long getId() {
         return id;
     }
 
+    //Id setzen
     public void setId(Long id) {
         this.id = id;
     }
 
+    //
     public Date getStartDate() {
         return startDate;
     }

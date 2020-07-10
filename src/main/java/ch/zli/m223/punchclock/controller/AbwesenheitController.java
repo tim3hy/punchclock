@@ -21,12 +21,21 @@ public class AbwesenheitController {
         this.abwesenheitService = abwesenheitService;
     }
 
+    /**
+     * Gets all Abwesenheiten
+     * @return List of all Abwesenheiten
+     */
     @GetMapping
     @ResponseStatus(HttpStatus.OK)
     public List<AbwesenheitKrankheit> getAllAbwesenheiten() {
         return abwesenheitService.findAll();
     }
 
+    /**
+     * Creates Abwesenheit
+     * @param abwesenheitKrankheit
+     * @return abwesenheitKrankheit
+     */
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
     public AbwesenheitKrankheit createAbwesenheit(@Valid @RequestBody AbwesenheitKrankheit abwesenheitKrankheit) {

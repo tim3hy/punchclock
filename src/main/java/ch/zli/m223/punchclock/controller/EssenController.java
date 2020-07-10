@@ -18,12 +18,21 @@ public class EssenController {
         this.essenService = essenService;
     }
 
+    /**
+     * Gets all Essensvorschlag
+     * @return List Essesnvorschlag
+     */
     @GetMapping
     @ResponseStatus(HttpStatus.OK)
     public List<Essensvorschlag> getAllEssensvor() {
         return essenService.findAll();
     }
 
+    /**
+     * Creates Essenvorschlag
+     * @param essensvorschlag
+     * @return essensvorschlag
+     */
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
     public Essensvorschlag createEssensvor(@Valid @RequestBody Essensvorschlag essensvorschlag) {
