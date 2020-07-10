@@ -11,7 +11,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/entries")
 public class EntryController {
-    private EntryService entryService;
+    private final EntryService entryService;
 
     public EntryController(EntryService entryService) {
         this.entryService = entryService;
@@ -28,4 +28,12 @@ public class EntryController {
     public Entry createEntry(@Valid @RequestBody Entry entry) {
         return entryService.createEntry(entry);
     }
+
+    @DeleteMapping("/{id}")
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    public void deleteEntry(@PathVariable long id){ entryService.deleteEntry(id); }
+
+    @PutMapping("/{id}")
+    @ResponseStatus(HttpStatus.CREATED)
+    public void editEntry(@Valid @RequestBody Entry entry){ entryService.editEntry(entry);}
 }

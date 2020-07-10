@@ -8,7 +8,7 @@ import java.util.List;
 
 @Service
 public class EntryService {
-    private EntryRepository entryRepository;
+    private final EntryRepository entryRepository;
 
     public EntryService(EntryRepository entryRepository) {
         this.entryRepository = entryRepository;
@@ -21,4 +21,6 @@ public class EntryService {
     public List<Entry> findAll() {
         return entryRepository.findAll();
     }
+    public void deleteEntry(long id) { entryRepository.deleteById(id);}
+    public void editEntry(Entry entry){ entryRepository.save(entry);}
 }
